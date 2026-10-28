@@ -10,11 +10,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class ExemploController {
     private IAcervoRepository acervo;
     private IEditoraRepository editoras;
+    private IAutorRepository autores;
 
     @Autowired
-    public ExemploController(IAcervoRepository acervo, IEditoraRepository editoras) {
+    public ExemploController(IAcervoRepository acervo, IEditoraRepository editoras,
+            IAutorRepository autores) {
         this.acervo = acervo;        
         this.editoras = editoras;
+        this.autores = autores;
     }
 
     @GetMapping("")
@@ -33,8 +36,8 @@ public class ExemploController {
     }
 
     @GetMapping("/livrosautor/{autor}")
-    public List<Livro> getLivrosTitulo(@PathVariable String autor) {
-        return acervo.getLivrosAutor(autor);
+    public List<Livro> getLivrosAutor(@PathVariable long autor) {
+        return acervo.getLivrosAutor(autores.getAutorNumero(autor));
     }
 
     @GetMapping("/editoras")
@@ -50,6 +53,16 @@ public class ExemploController {
     @GetMapping("/editoranome/{nome}")
     public Editora getEditoraNome(@PathVariable String nome) {
         return editoras.getEditoraNome(nome);
+    }
+
+    @GetMapping("/autores")
+    public List<Autor> getAutores() {
+        return autores.getAutores();
+    }
+
+    @GetMapping("/autornum/{numero}")
+    public Autor getAutorNumero(@PathVariable("numero") long numero) {
+        return autores.getAutorNumero(numero);
     }
 
 }

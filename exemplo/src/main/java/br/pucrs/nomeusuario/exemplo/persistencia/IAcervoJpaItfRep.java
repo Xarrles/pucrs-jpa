@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 public interface IAcervoJpaItfRep extends CrudRepository<Livro,Long>{
     List<Livro> findAll(); 
     Livro findById(long id); 
-    List<Livro> findByAutor(String autor);
+    List<Livro> findByAutor(Autor autor);
 }
 
 

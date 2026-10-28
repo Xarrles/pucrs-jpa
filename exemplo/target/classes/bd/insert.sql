@@ -1,8 +1,12 @@
 INSERT INTO editora (codigo,nome) VALUES (210,'Artmed');
 INSERT INTO editora (codigo,nome) VALUES (220,'John Wiley and Sons');
 INSERT INTO editora (codigo,nome) VALUES (230,'Bookman');
-INSERT INTO livro (id,editora_codigo,titulo,autor,ano) VALUES (110,210,'Aprendendo Java', 'Maria da Silva', 2015);
-INSERT INTO livro (id,editora_codigo,titulo,autor,ano) VALUES (120,220,'Spring-Boot', 'Jose de Souza', 2020);
-INSERT INTO livro (id,editora_codigo,titulo,autor,ano) VALUES (130,230,'Principios SOLID', 'Pedro da Silva', 2023);
-INSERT INTO livro (id,editora_codigo,titulo,autor,ano) VALUES (140,230,'Padroes de Projeto', 'Joana Moura', 2023);
-INSERT INTO livro (id,editora_codigo,titulo,autor,ano) VALUES (150,210,'Teste Unitario', 'Pedro da Silva', 2024);
+INSERT INTO autor (numero,nome,ano_nascimento) VALUES (310,'Maria da Silva',1980);
+INSERT INTO autor (numero,nome,ano_nascimento) VALUES (320,'Jose de Souza',1975);
+INSERT INTO autor (numero,nome,ano_nascimento) VALUES (330,'Pedro da Silva',1985);
+INSERT INTO autor (numero,nome,ano_nascimento) VALUES (340,'Joana Moura',1990);
+INSERT INTO livro (id,editora_codigo,autor_numero,titulo,ano) VALUES (110,210,310,'Aprendendo Java',2015);
+INSERT INTO livro (id,editora_codigo,autor_numero,titulo,ano) VALUES (120,220,320,'Spring-Boot',2020);
+INSERT INTO livro (id,editora_codigo,autor_numero,titulo,ano) VALUES (130,230,330,'Principios SOLID',2023);
+INSERT INTO livro (id,editora_codigo,autor_numero,titulo,ano) VALUES (140,230,340,'Padroes de Projeto',2023);
+INSERT INTO livro (id,editora_codigo,autor_numero,titulo,ano) VALUES (150,210,330,'Teste Unitario',2024);

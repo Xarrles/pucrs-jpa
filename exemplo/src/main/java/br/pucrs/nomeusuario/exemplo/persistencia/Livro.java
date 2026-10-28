@@ -1,5 +1,6 @@
 package br.pucrs.nomeusuario.exemplo.persistencia;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -9,17 +10,19 @@ public class Livro {
     @ManyToOne(cascade = CascadeType.REFRESH)
     private Editora editora;
     private String titulo;
-    private String autor;
+    @ManyToOne(cascade = CascadeType.REFRESH)
+    @JsonBackReference
+    private Autor autor;
     private int ano;
 
     public Livro() {        
     }
 
-    public Livro(long id, Editora editora, String titulo, String autor, int ano) {
+    public Livro(long id, Editora editora, String titulo, Autor autor, int ano) {
         this.id = id;
         this.editora = editora;
-        this.titulo = titulo;
         this.autor = autor;
+        this.titulo = titulo;
         this.ano = ano;
     }
 
@@ -35,7 +38,7 @@ public class Livro {
         return titulo;
     }
 
-    public String getAutor() {
+    public Autor getAutor() {
         return autor;
     }
 

@@ -1,0 +1,15 @@
+/workspaces/pucrs-jpa/exemplo/src/main/java/br/pucrs/nomeusuario/exemplo/ExemploApplication.java
+/workspaces/pucrs-jpa/exemplo/src/main/java/br/pucrs/nomeusuario/exemplo/apresentacao/ExemploController.java
+/workspaces/pucrs-jpa/exemplo/src/main/java/br/pucrs/nomeusuario/exemplo/negocio/VendaLivro.java
+/workspaces/pucrs-jpa/exemplo/src/main/java/br/pucrs/nomeusuario/exemplo/persistencia/AcervoRepoJpaImpl.java
+/workspaces/pucrs-jpa/exemplo/src/main/java/br/pucrs/nomeusuario/exemplo/persistencia/Autor.java
+/workspaces/pucrs-jpa/exemplo/src/main/java/br/pucrs/nomeusuario/exemplo/persistencia/AutorRepoJpaImpl.java
+/workspaces/pucrs-jpa/exemplo/src/main/java/br/pucrs/nomeusuario/exemplo/persistencia/Editora.java
+/workspaces/pucrs-jpa/exemplo/src/main/java/br/pucrs/nomeusuario/exemplo/persistencia/EditoraRepoJpaImpl.java
+/workspaces/pucrs-jpa/exemplo/src/main/java/br/pucrs/nomeusuario/exemplo/persistencia/IAcervoJpaItfRep.java
+/workspaces/pucrs-jpa/exemplo/src/main/java/br/pucrs/nomeusuario/exemplo/persistencia/IAcervoRepository.java
+/workspaces/pucrs-jpa/exemplo/src/main/java/br/pucrs/nomeusuario/exemplo/persistencia/IAutorJpaItfRep.java
+/workspaces/pucrs-jpa/exemplo/src/main/java/br/pucrs/nomeusuario/exemplo/persistencia/IAutorRepository.java
+/workspaces/pucrs-jpa/exemplo/src/main/java/br/pucrs/nomeusuario/exemplo/persistencia/IEditoraJpaItfRep.java
+/workspaces/pucrs-jpa/exemplo/src/main/java/br/pucrs/nomeusuario/exemplo/persistencia/IEditoraRepository.java
+/workspaces/pucrs-jpa/exemplo/src/main/java/br/pucrs/nomeusuario/exemplo/persistencia/Livro.java
